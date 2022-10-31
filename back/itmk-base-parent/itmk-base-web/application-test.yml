@@ -1,0 +1,23 @@
+#端口号配置
+server:
+  port:8089
+
+#数据库连接配置
+spring:
+  datasource:
+    type:com.alibaba.druid.pool.DruidDataSource
+    driver-class-name:com.mysql.cj.jdbc.Driver
+    url:jdbc:mysql://localhost:3306/sys_wygl?useUnicode=true&characterEncoding=utf8
+    username:root
+    password:123456
+
+#mybatis plus配置
+mybatis-plus
+  configuration:
+    log-impl:org.apache.ibatis.logging.stdout.stdOutImpl
+  global-config:
+    db-config:
+      #配置mybatis plus在更新时只更新非空和null的字段
+    update-strategy:not_empty
+logging:
+  pattern:
